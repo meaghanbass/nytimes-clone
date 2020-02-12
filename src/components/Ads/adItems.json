@@ -1,0 +1,17 @@
+[
+    {
+        "label": "Your Tuesday Briefing",
+        "link": "Here's what your need to know.",
+        "image": "/images/ads/img-one.png"
+    },
+    {
+        "label": "California Today",
+        "link": "Why graduate students at U.C. Santa Cruz are striking.",
+        "image": "/images/ads/img-two.jpg"
+    },
+    {
+        "label": "Listen to 'The Field'",
+        "link": "Iowa's aftershocks in New Hampshire.",
+        "image": "/images/ads/img-three.png"
+    }
+]
