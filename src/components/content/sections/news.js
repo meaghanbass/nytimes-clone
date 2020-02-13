@@ -29,7 +29,7 @@ const Opinion = ({data}) => (
                 <h3>Recent News <MoreArrow /></h3>
                 {data.news.edges.map(({ node }) => (
                     <>
-                    <Link to="/" className="article-preview">
+                    <Link to={node.fields.slug} className="article-preview">
                         <h4>{node.frontmatter.title}</h4>
                         <p className="excerpt">{node.excerpt}</p>
                         <p className="date">{node.frontmatter.date}</p>

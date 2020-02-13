@@ -17,9 +17,6 @@ const Footer = ({ siteTitle }) => (
                 <Link className="home-link" to="/">Go to Home Page »</Link>
             </div>
             <div className="middle">
-
-            </div>
-            <div className="bottom">
                 <div className="section-wrapper">
                     <section>
                         <h3>News</h3>
@@ -120,6 +117,24 @@ const Footer = ({ siteTitle }) => (
                         </ul>
                     </section>
                 </div>
+            </div>
+            <div className="bottom">
+                <p className="copyright">&copy; 2020 The New York Times Company</p>
+                <ul className="site-information">
+                    <li><a href="/">NYTCo</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                    <li><a href="/">Work with us</a></li>
+                    <li><a href="/">Advertise</a></li>
+                    <li><a href="/">T Brand Studio</a></li>
+                    <li><a href="/">Your Ad Choices</a></li>
+                    <li><a href="/">Privacy</a></li>
+                    <li><a href="/">Terms of Service</a></li>
+                    <li><a href="/">Terms of Sale</a></li>
+                    <li><a href="/">Site Map</a></li>
+                    <li><a href="/">Help</a></li>
+                    <li><a href="/">Subscriptions</a></li>
+                    <li><a href="/">Do Not Sell My Personal Information</a></li>
+                </ul>
             </div>
         </div>
     </footer>

@@ -10,7 +10,7 @@ import React from "react"
 import SearchIcon from "../images/search.svg"
 import Hamburger from "../images/hamburger.svg"
 
-// import DateComponent from "../components/today-date"
+import DateComponent from "../components/today-date"
 
 const HeaderTop = ({ siteTitle }) => (
   <header>
@@ -30,14 +30,19 @@ const HeaderTop = ({ siteTitle }) => (
         <div className="right">
           <button>subscribe now</button>
           <button>login</button>
-          {/* <DateComponent /> */}
         </div>
       </div>
 
       <div className="middle">
-        <h1>
-          <Link to="/">{siteTitle}</Link>
-        </h1>
+        <div className="left">
+          <DateComponent />
+        </div>
+        <div className="center">
+          <h1>
+            <Link to="/">{siteTitle}</Link>
+          </h1>
+        </div>
+        <div className="right"></div>
       </div>
     </div>
   </header>

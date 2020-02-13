@@ -1,9 +1,7 @@
-// import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React from "react"
 import AdItem from "./ad-item"
 
-const AdBanner = ({ siteTitle }) => (
+const AdBanner = () => (
     <>
     <section className="ad">
         <div className="left">
@@ -11,10 +9,12 @@ const AdBanner = ({ siteTitle }) => (
         </div>
         
         <div className="right">
-            <div>Placeholder:
+            <div>
+                Placeholder:
                 Stocks
             </div>
-            <div>Placeholder:
+            <div>
+                Placeholder:
                 Weather
             </div>
         </div>

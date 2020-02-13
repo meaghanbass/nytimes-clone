@@ -6,16 +6,16 @@ import HeaderBottom from "./header-bottom"
 import AdBanner from "./Ads/ad-banner"
 import Footer from "./footer"
 
-import MainContent from "./content/layouts/mainContent"
+// import MainContent from "./content/layouts/mainContent"
 
 const GeneralLayout = ({ children }) => {
     const data = useStaticQuery(graphql`
         query GeneralSiteTitleQuery {
-        site {
-            siteMetadata {
-            title
+            site {
+                siteMetadata {
+                    title
+                }
             }
-        }
         }
     `)
 
@@ -26,11 +26,11 @@ const GeneralLayout = ({ children }) => {
         <div className="container">
             <main>
             <AdBanner />
-            <p>General Layout</p>
+            {/* <p>General Layout</p> */}
             <div className="content general-layout">
-                <MainContent />
+                {children}
+                {/* <MainContent /> */}
             </div>
-            {children}
             </main>
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
