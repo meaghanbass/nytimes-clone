@@ -1,5 +1,7 @@
 import React from "react"
 import AdItem from "./ad-item"
+import Stocks from "../Stocks/stock-quotes"
+import Weather from "../Weather/weather"
 
 const AdBanner = () => (
     <>
@@ -9,13 +11,11 @@ const AdBanner = () => (
         </div>
         
         <div className="right">
-            <div>
-                Placeholder:
-                Stocks
+            <div className="stock-wrapper">
+                <Stocks />
             </div>
-            <div>
-                Placeholder:
-                Weather
+            <div className="weather-wrapper">
+                <Weather />
             </div>
         </div>
     </section>

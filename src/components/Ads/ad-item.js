@@ -29,7 +29,7 @@ function getAdLabels(data) {
     data.allAdItemsJson.edges.forEach(item =>
         adItemsArray.push(
             <div className="ad-item" key={item.node.label}>
-                <img src={item.node.image} alt="nope"/>
+                <img src={item.node.image} alt="Not loaded."/>
                 <div>
                     <p className="title">{item.node.label}</p>
                     <p className="snippet">{item.node.link}</p>
