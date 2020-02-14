@@ -3,6 +3,7 @@ title: "Planting Trees Won't Save the World"
 date: "2017-08-10"
 tags: ["lorem","ipsum","sit"]
 category: "opinion"
+featuredImage: ../images/article-images/planting.jpg
 ---
 
 One trillion trees.

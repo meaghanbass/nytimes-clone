@@ -150,6 +150,7 @@ header {
         box-shadow: 0 0 5px 1px rgba(0,0,0,0.28);
         -webkit-transition: 0.5s cubic-bezier(0.23,1,0.32,1);
         transition: 0.5s cubic-bezier(0.23,1,0.32,1);
+        z-index: 10000;
     }
     &.header-sticky.mobile-only {
         padding-top: 10px;

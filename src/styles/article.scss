@@ -15,8 +15,14 @@ article {
         font-size: 1rem;
         text-transform: capitalize;
     }
+    svg {
+        height: 15px;
+    }
     .post-content {
         font-family: Georgia, Times, Times New Roman, serif;
+        padding-top: 1rem;
+        margin-top: 1.5rem;
+        border-top: 1px solid #ccc;
     }
     .publish-date {
         color: #666;

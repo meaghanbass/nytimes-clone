@@ -6,7 +6,7 @@ const Opinion = ({data}) => (
     <StaticQuery 
         query={graphql`
             query NewsArticles {
-                news: allMarkdownRemark(filter: {frontmatter: {category: {eq: "news"}}}) {
+                news: allMarkdownRemark {
                     edges {
                         node {
                             frontmatter {

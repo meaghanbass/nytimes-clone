@@ -32,13 +32,16 @@ class WeatherForecast extends React.Component {
         var { isLoaded, weather } = this.state;
 
         if (!isLoaded) {
-            return <div>Loading...</div>
+            return (
+                <div>Loading...
+                </div>
+            );
         }
 
         else {
             console.log(weather);
 
-            if(weather.current.weather_descriptions[0] === "Sunny")  {
+            if  (weather.current.weather_descriptions[0] === "Sunny")  {
                 return (
                     <>
                     <p className="weather-forecast"><Sunny /> {weather.current.temperature}&deg;C</p>

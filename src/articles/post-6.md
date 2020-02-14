@@ -3,6 +3,7 @@ title: "Essential Phone ends software support, Android updates after over two ye
 date: "2017-08-21"
 tags: ["lorem","ipsum","dolor"]
 category: "news"
+featuredImage: ../images/article-images/android.jpg
 ---
 
 The Essential Phone — PH-1 — debuted back in 2017 with the promise of premium hardware and clean software. Quickly, though, that vision started to fail as initial reviews were negative and prices were slashed as a result. Now, as the company shuts down, the Essential Phone is getting an abrupt end to software updates.

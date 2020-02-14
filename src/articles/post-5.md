@@ -3,6 +3,7 @@ title: "Geoff Keighley will not participate in E3 2020"
 date: "2017-08-21"
 tags: ["lorem","ipsum","dolor"]
 category: "news"
+featuredImage: ../images/article-images/exhibit.jpg
 ---
 
 Media personality Geoff Keighley will not produce the E3 Coliseum this year.

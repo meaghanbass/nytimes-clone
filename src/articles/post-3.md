@@ -3,6 +3,7 @@ title: "Major Smartphone Trade Show Canceled In Barcelona Amid Coronavirus Conce
 date: "2017-08-21"
 tags: ["lorem","ipsum","dolor"]
 category: "news"
+featuredImage: ../images/article-images/tradeshow.jpg
 ---
 
 One of the world's biggest trade shows has been cancelled as mounting concerns over the coronavirus outbreak ripple across the business world.

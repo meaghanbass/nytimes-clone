@@ -3,6 +3,7 @@ title: "Lax FAA oversight allowed Southwest to put millions of passengers at ris
 date: "2017-08-21"
 tags: ["lorem","ipsum","dolor"]
 category: "news"
+featuredImage: ../images/article-images/lax.jpg
 ---
 
 The Federal Aviation Administration allowed Southwest Airlines to put millions of passengers at risk by letting the airline operate planes that did not meet U.S. aviation standards and by failing to provide its own inspectors with the training needed to ensure the highest degree of safety, according to a report released Tuesday by the Department of Transportation’s inspector general.

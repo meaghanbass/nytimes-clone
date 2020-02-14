@@ -3,6 +3,7 @@ title: "Microsoft Wonder Bar: Apple Touch Bar gets competition in Windows 10X"
 date: "2017-08-21"
 tags: ["lorem","ipsum","dolor"]
 category: "news"
+featuredImage: ../images/article-images/microsoft.jpg
 ---
 
 Apple's Touch Bar is getting some competition from Microsoft. On Tuesday, the tech giant revealed more details about its Wonder Bar -- a touch bar that will be built into dual-screen devices with its Windows 10X operating system. 
