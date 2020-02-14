@@ -3,7 +3,7 @@ title: "Coronavirus vs. SARS"
 date: "2020-02-13"
 tags: ["lorem","ipsum","sit"]
 category: "statistics"
-featuredImage: https://assetsglobal.s3-us-west-1.amazonaws.com/newsblog/android.jpg
+featuredImage: ../images/article-images/microsoft.jpg
 ---
 
 statistics
