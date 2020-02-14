@@ -1,5 +1,7 @@
 import React from "react"
 import SunnyIcon from "../../images/sunny.svg"
+import PatchyFogIcon from "../../images/patchyfog.svg"
+import NEEDICON from "../../images/NEEDWEATHER.svg"
 
 class WeatherForecast extends React.Component {
 
@@ -40,9 +42,14 @@ class WeatherForecast extends React.Component {
                     <p className="weather-forecast"><SunnyIcon /> {items.properties.periods[0].temperature}&deg;F</p>
                 );
             }
+            else if(items.properties.periods[0].shortForecast === "Patchy Fog") {
+                return (
+                    <p className="weather-forecast"><PatchyFogIcon /> {items.properties.periods[0].temperature}&deg;F</p>
+                );
+            }
             else {
                 return (
-                    <p className="weather-forecast">{items.properties.periods[0].temperature}&deg;F</p>
+                    <p className="weather-forecast"><NEEDICON />{items.properties.periods[0].temperature}&deg;F</p>
                 );
             }
             // return (

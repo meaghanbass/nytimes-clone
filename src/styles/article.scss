@@ -5,7 +5,9 @@ $theme-dk: #BC3C40;
 
 article {
     margin: 25px 0;
-    width: 800px;
+    // width: 800px;
+    width: 100%;
+    max-width: 800px;
     // border-right: 1px solid #ccc;
     padding-right: 15px;
     h4 {
@@ -27,6 +29,10 @@ aside {
     margin: 25px 0;
     width: inherit;
     padding-left: 15px;
+    display: none !important;
+    @media screen and (min-width: 830px) {
+        display: block !important;
+    }
 }
 
 thead {
