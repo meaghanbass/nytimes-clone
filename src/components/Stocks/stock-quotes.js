@@ -23,49 +23,68 @@ import NDAQ from "./nasdaq"
 
 class StockQuotes extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [],
-            isLoaded: false,
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         items: [],
+    //         isLoaded: false,
+    //     }
+    // }
 
-    componentDidMount() {
+    // componentDidMount() {
         
-        fetch('https://cloud.iexapis.com/stable/stock/aapl/quote?token=pk_e00d5ddab84a428993c8e04cb34b69f2')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true,
-                    items: json,
-                })
-            });
-    }
+    //     fetch('http://cloud.iexapis.com/stable/stock/aapl/quote?token=pk_e00d5ddab84a428993c8e04cb34b69f2')
+    //         .then(res => res.json())
+    //         .then(json => {
+    //             this.setState({
+    //                 isLoaded: true,
+    //                 items: json,
+    //             })
+    //         });
+    // }
+
+    // render() {
+
+    //     var { items } = this.state;
+
+    //     if (items.isUsMarketOpen === true) {
+    //         console.log(items.isUsMarketOpen);
+    //         return (
+    //             <section className="open">
+    //                 <SPY />
+    //                 <DIA />
+    //                 <NDAQ />
+    //             </section>
+    //         );
+    //     }
+
+    //     else if (items.isUsMarketOpen === false) {
+    //         console.log(items.isUsMarketOpen);
+    //         return (
+                // <section className="closed">
+                //     <SPY />
+                //     <DIA />
+                //     <NDAQ />
+                // </section>
+    //         );
+    //     }
+
+    //     else {
+    //         console.log(items.isUsMarketOpen);
+    //         return (
+    //             <p>error</p>
+    //         )
+    //     }
+    // }
 
     render() {
-
-        var { items } = this.state;
-
-        if (items.isUsMarketOpen === true) {
-            return (
-                <>
-                    <SPY />
-                    <DIA />
-                    <NDAQ />
-                </>
-            );
-        }
-
-        else {
-            return (
-                <section className="closed">
-                    <SPY />
-                    <DIA />
-                    <NDAQ />
-                </section>
-            );
-        }
+        return (
+            <section>
+                <SPY />
+                <DIA />
+                <NDAQ />
+            </section>
+        )
     }
 
 } 

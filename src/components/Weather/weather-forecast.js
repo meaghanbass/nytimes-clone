@@ -1,60 +1,84 @@
 import React from "react"
-import SunnyIcon from "../../images/sunny.svg"
-import PatchyFogIcon from "../../images/patchyfog.svg"
-import NEEDICON from "../../images/NEEDWEATHER.svg"
+import Sunny from "../../images/new-weather/sunny.svg"
+import PartlyCloudy from "../../images/new-weather/partly-coudy.svg"
+import Fog from "../../images/new-weather/fog.svg"
+import Mist from "../../images/new-weather/mist.svg"
+
+import NEEDICON from "../../images/weather/NEEDWEATHER.svg"
 
 class WeatherForecast extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
+            weather: [],
             isLoaded: false,
         }
     }
 
     componentDidMount() {
-        fetch('https://api.weather.gov/gridpoints/SGX/55,13/forecast')
+        fetch('http://api.weatherstack.com/current?%20access_key=89f1d38643f64d8e2b0a79b0a09f9f7d&query=San%20Diego')
             .then(res => res.json())
             .then(json => {
                 this.setState({
                     isLoaded: true,
-                    items: json,
+                    weather: json,
                 })
             });
     }
 
     render() {
 
-        var { isLoaded, items } = this.state;
+        var { isLoaded, weather } = this.state;
 
         if (!isLoaded) {
             return <div>Loading...</div>
         }
 
         else {
-            console.log(items);
-            console.log(items.properties.generatedAt);
-            console.log(items.properties.periods[0].detailedForecast);
+            console.log(weather);
 
-            if(items.properties.periods[0].shortForecast === "Sunny")  {
+            if(weather.current.weather_descriptions[0] === "Sunny")  {
                 return (
-                    <p className="weather-forecast"><SunnyIcon /> {items.properties.periods[0].temperature}&deg;F</p>
+                    <>
+                    <p className="weather-forecast"><Sunny /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
                 );
             }
-            else if(items.properties.periods[0].shortForecast === "Patchy Fog") {
+            else if(weather.current.weather_descriptions[0] === "Patchy Fog") {
                 return (
-                    <p className="weather-forecast"><PatchyFogIcon /> {items.properties.periods[0].temperature}&deg;F</p>
+                    <>
+                    <p className="weather-forecast"><Fog /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
+                );
+            }
+            else if(weather.current.weather_descriptions[0] === "Mist") {
+                return (
+                    <>
+                    <p className="weather-forecast"><Mist /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
+                );
+            }
+            else if(weather.current.weather_descriptions[0] === "Partly cloudy") {
+                return (
+                    <>
+                    <p className="weather-forecast"><PartlyCloudy /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
                 );
             }
             else {
+                console.log(weather.current.weather_descriptions[0]);
                 return (
-                    <p className="weather-forecast"><NEEDICON />{items.properties.periods[0].temperature}&deg;F</p>
+                    <>
+                    <p className="weather-forecast"><NEEDICON /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
                 );
             }
-            // return (
-            //     <p className="weather-forecast">{items.properties.periods[0].temperature}&deg;F</p>
-            // );
         }
     }
 

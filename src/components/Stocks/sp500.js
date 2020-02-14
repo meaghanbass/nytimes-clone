@@ -41,18 +41,35 @@ class SPY extends React.Component {
             var SPYyesterdayPrice = items.previousClose;
             var SPYtodayPrice = items.iexRealtimePrice;
             var SPYtotal = ('SPY CHANGES ' + SPYyesterdayPrice + ', ' + SPYtodayPrice);
+            var SPYopen = items.isUSMarketOpen;
             console.log(SPYtotal);
 
-            if (SPYtodayPrice < SPYyesterdayPrice) {
-                return (
-                    <p>S&P 500 <span className="stock-down">{SPYpct.toFixed(2)}%</span></p>
-                );
+            if (SPYopen === true) {
+                if (SPYtodayPrice < SPYyesterdayPrice) {
+                    return (
+                        <p className="open">SPY <span className="stock-down">{SPYpct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="open">SPY <span className="stock-up">{SPYpct.toFixed(2)}%</span></p>
+                    );
+                }
             }
 
             else {
-                return (
-                    <p>S&P 500 <span className="stock-up">{SPYpct.toFixed(2)}%</span></p>
-                );
+                if (SPYtodayPrice < SPYyesterdayPrice) {
+                    return (
+                        <p className="closed">SPY <span className="stock-down">{SPYpct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="closed">SPY <span className="stock-up">{SPYpct.toFixed(2)}%</span></p>
+                    );
+                }
             }
         }
     }

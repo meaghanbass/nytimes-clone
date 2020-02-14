@@ -27,13 +27,11 @@ class NDAQ extends React.Component {
     render() {
 
         var { isLoaded, items } = this.state;
-
-        // console.log('Price: ' + items.iexRealtimePrice + ', ' + 'Percent Change: ' + items.changePercent);
-
         var NASDAQdata = items.changePercent;
-        var NASDAQ = (NASDAQdata * 100);
+        var NASDAQpct = (NASDAQdata * 100);
+        var NASDAQopen = items.isUSMarketOpen;
         console.log(NASDAQdata);
-        console.log(NASDAQ);
+        console.log(NASDAQpct);
 
         if (!isLoaded) {
             return <div>Loading...</div>
@@ -45,16 +43,32 @@ class NDAQ extends React.Component {
             var NASDAQtotal = ('NASDAQ CHANGES ' + NASDAQyesterdayPrice + ', ' + NASDAQtodayPrice);
             console.log(NASDAQtotal);
 
-            if (NASDAQtodayPrice < NASDAQyesterdayPrice) {
-                return (
-                    <p>Nasdaq <span className="stock-down">{NASDAQ.toFixed(2)}%</span></p>
-                );
+            if (NASDAQopen === true) {
+                if (NASDAQtodayPrice < NASDAQyesterdayPrice) {
+                    return (
+                        <p className="open">Nasdaq <span className="stock-down">{NASDAQpct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="open">Nasdaq <span className="stock-up">{NASDAQpct.toFixed(2)}%</span></p>
+                    );
+                }
             }
 
             else {
-                return (
-                    <p>Nasdaq <span className="stock-up">{NASDAQ.toFixed(2)}%</span></p>
-                );
+                if (NASDAQtodayPrice < NASDAQyesterdayPrice) {
+                    return (
+                        <p className="closed">Nasdaq <span className="stock-down">{NASDAQpct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="closed">Nasdaq <span className="stock-up">{NASDAQpct.toFixed(2)}%</span></p>
+                    );
+                }
             }
         }
     }

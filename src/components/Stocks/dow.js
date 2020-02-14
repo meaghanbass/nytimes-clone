@@ -28,8 +28,6 @@ class DIA extends React.Component {
 
         var { isLoaded, items } = this.state;
 
-        // console.log('Price: ' + items.iexRealtimePrice + ', ' + 'Percent Change: ' + items.changePercent);
-
         var DIAdata = items.changePercent;
         var DIApct = (DIAdata * 100);
         console.log(DIAdata);
@@ -43,18 +41,35 @@ class DIA extends React.Component {
             var DIAyesterdayPrice = items.previousClose;
             var DIAtodayPrice = items.iexRealtimePrice;
             var DIAtotal = ('DIA CHANGES ' + DIAyesterdayPrice + ', ' + DIAtodayPrice);
+            var DIAopen = items.isUSMarketOpen;
             console.log(DIAtotal);
 
-            if (DIAtodayPrice < DIAyesterdayPrice) {
-                return (
-                    <p>Dow <span className="stock-down">{DIApct.toFixed(2)}%</span></p>
-                );
+            if (DIAopen === true) {
+                if (DIAtodayPrice < DIAyesterdayPrice) {
+                    return (
+                        <p className="open">Dow <span className="stock-down">{DIApct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="open">Dow <span className="stock-up">{DIApct.toFixed(2)}%</span></p>
+                    );
+                }
             }
 
             else {
-                return (
-                    <p>Dow <span className="stock-up">{DIApct.toFixed(2)}%</span></p>
-                );
+                if (DIAtodayPrice < DIAyesterdayPrice) {
+                    return (
+                        <p className="closed">Dow <span className="stock-down">{DIApct.toFixed(2)}%</span></p>
+                    );
+                }
+    
+                else {
+                    return (
+                        <p className="closed">Dow <span className="stock-up">{DIApct.toFixed(2)}%</span></p>
+                    );
+                }
             }
         }
     }
