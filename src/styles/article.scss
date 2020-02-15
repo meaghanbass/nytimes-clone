@@ -5,11 +5,12 @@ $theme-dk: #BC3C40;
 
 article {
     margin: 25px 0;
-    // width: 800px;
     width: 100%;
-    max-width: 800px;
-    // border-right: 1px solid #ccc;
-    padding-right: 15px;
+    // max-width: 800px;
+    max-width: calc(100vw - 30px);
+    @media screen and (min-width: 830px) {
+        padding-right: 15px;
+    }
     h4 {
         color: #567b95;
         font-size: 1rem;
