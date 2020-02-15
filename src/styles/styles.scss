@@ -488,8 +488,11 @@ main {
             width: inherit;
             display: block;
             grid-row: span 2;
-            padding-right: 15px;
+            // padding-right: 15px;
             background: lightgray;
+            @media screen and (min-width: 830px) {
+                padding-right: 15px;
+            }
         }
         .aside-content {
             padding-left: 15px;
@@ -522,8 +525,10 @@ main {
             width: inherit;
             display: block;
             grid-row: span 2;
-            padding-right: 15px;
-            // background: lightgray;
+            // padding-right: 15px;
+            @media screen and (min-width: 830px) {
+                padding-right: 15px;
+            }
         }
         .aside-content {
             padding-left: 15px;
