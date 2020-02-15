@@ -181,7 +181,7 @@ header {
         font-size: 0.75rem;
         align-items: center;
         .left {
-            // min-width: 200px;
+            display: flex;
             @media screen and (min-width: 436px) {
                 min-width: 200px;
             }
@@ -202,7 +202,6 @@ header {
         }
         .right {
             text-align: right;
-            // min-width: 200px;
             @media screen and (min-width: 436px) {
                 min-width: 200px;
             }
@@ -215,10 +214,6 @@ header {
         display: flex;
         justify-content: space-between;
         .left {
-            // min-width: 200px;
-            // display: flex;
-            // justify-content: left;
-            // align-items: flex-end;
             display: none;
             @media screen and (min-width: 878px) {
                 min-width: 200px;
@@ -229,19 +224,18 @@ header {
         }
         .center {
             margin: auto;
+            display: flex;
             @media screen and (min-width: 878px) {
 
             }
-            a {
+            h1 a {
                 font-family: 'Chomsky';
-                // font-size: 3.25rem;
                 font-size: 2rem;
                 @media screen and (min-width: 767px) {
                     font-size: 3.25rem;
                 }
                 &:hover {
                     text-decoration: none;
-                    // color: #333;
                     color: inherit;
                 }
             }
@@ -254,10 +248,6 @@ header {
                 justify-content: right;
                 align-items: flex-end;
             }
-            // min-width: 200px;
-            // display: flex;
-            // justify-content: right;
-            // align-items: flex-end;
         }
     }
     .bottom {
@@ -271,9 +261,7 @@ header {
         }
         .navbar {
             border-top: 1px solid #ebebeb;
-            // padding: 0 60px;
             padding: 0;
-            // border-bottom: 1px solid #000;
             -webkit-transition: 0.5s cubic-bezier(0.23,1,0.32,1);
             transition: 0.5s cubic-bezier(0.23,1,0.32,1);
             @media screen and (min-width: 878px) {
@@ -296,13 +284,10 @@ header {
             -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
             justify-content: space-between;
-            // padding: 5px 0 4px;
             width: 100%;
             
             .nav-link {
                 color: black;
-                // padding-left: 0;
-                // padding-right: 0;
                 padding-left: 5px;
                 padding-right: 5px;
                 @media screen and (min-width: 878px) {
@@ -735,4 +720,72 @@ footer {
             }
         }
     }
+}
+
+// Bootstrap Overwrites
+@media screen and (min-width: 100vw) {
+    .navbar-expand-full {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .navbar {
+        .sidebar-toggler {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1599px) {
+        .sidebar-toggler.navbar-toggler {
+            padding-left: 7px;
+            // border: 1px solid red !important;
+        }
+}
+
+.navbar {
+    margin-left: 0 !important;
+    padding: 0;
+    ul {
+        padding: 0;
+        a {
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 0.825rem;
+            font-weight: 700;
+            padding: 7px;
+            &:hover {
+                background: rgb(240,248,252);
+                color: inherit;
+            }
+        }
+    }
+    button:hover {
+        background-color: transparent;
+    }
+    .navbar-toggler {
+        border: none;
+        padding-left: 7px !important;
+    }
+    .navbar-collapse {
+        background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+        border-radius: 3px;
+        border-right: 1px solid rgb(204, 204, 204);
+        box-shadow: rgba(0, 0, 0, 0.1) 4px 0px 6px 1px;
+        height: 100%;
+        max-height: 100vh;
+        overflow-y: scroll;
+        left: 0px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0px;
+        width: 225px;
+        z-index: 1000000140;
+    }
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='margin-right: 20px;' viewBox='0 0 16 16' width='16px'%3E%3Crect x='1' y='3' fill='%23333333' width='14' height='2'%3E%3C/rect%3E%3Crect x='1' y='7' fill='%23333333' width='14' height='2'%3E%3C/rect%3E%3Crect x='1' y='11' fill='%23333333' width='14' height='2'%3E%3C/rect%3E%3C/svg%3E") !important;
+    width: 16px;
+    height: 16px;
 }

@@ -2,8 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-// import Navbar from "react-bootstrap/Navbar"
-// import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
 // import Form from "react-bootstrap/Form"
 // import FormControl from "react-bootstrap/FormControl"
 // import Button from "react-bootstrap/Button"
@@ -66,7 +66,35 @@ class HeaderTop extends React.Component {
                 <div className="container">
                   <div className="top">
                     <div className="left">
-                      <Hamburger style={{marginRight: `20px`}}/>
+                      {/* <Hamburger style={{marginRight: `20px`}}/> */}
+
+                      <Navbar bg="none" expand="full">
+                        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                        <Navbar.Collapse id="basic-navbar-nav">
+                          <ul>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" className="sidebar-toggler"/>
+                            <Nav.Link href="/">World</Nav.Link>
+                            <Nav.Link href="/">U.S.</Nav.Link>
+                            <Nav.Link href="/">Politics</Nav.Link>
+                            <Nav.Link href="/">N.Y.</Nav.Link>
+                            <Nav.Link href="/">Business</Nav.Link>
+                            <Nav.Link href="/">Opinion</Nav.Link>
+                            <Nav.Link href="/">Tech</Nav.Link>
+                            <Nav.Link href="/">Science</Nav.Link>
+                            <Nav.Link href="/">Health</Nav.Link>
+                            <Nav.Link href="/">Sports</Nav.Link>
+                            <Nav.Link href="/">Arts</Nav.Link>
+                            <Nav.Link href="/">Books</Nav.Link>
+                            <Nav.Link href="/">Style</Nav.Link>
+                            <Nav.Link href="/">Food</Nav.Link>
+                            <Nav.Link href="/">Travel</Nav.Link>
+                            <Nav.Link href="/">Magazine</Nav.Link>
+                            <Nav.Link href="/">Real Estate</Nav.Link>
+                            <Nav.Link id="test" href="/">Video</Nav.Link>
+                          </ul>
+                        </Navbar.Collapse>
+                      </Navbar>
+
                       <SearchIcon />
                       {/* <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
