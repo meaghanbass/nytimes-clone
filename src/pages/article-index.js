@@ -8,7 +8,7 @@ import '../styles/styles.scss'
 export default ({ data }) => {
     return (
         <GeneralLayout>
-        <SEO title="Home" />
+        <SEO title="Articles" />
         <div id="article-index">
             <br />
             <h4>Article Index</h4>

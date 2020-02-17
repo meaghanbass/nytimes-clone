@@ -21,7 +21,7 @@ class HeaderBottom extends React.Component {
                             <Navbar bg="none" className={this.state.isTop ? 'navbar ' : 'navbar alt '}>
                                 <Nav>
                                     <Nav.Link href="/">World</Nav.Link>
-                                    <Nav.Link href="/">U.S.</Nav.Link>
+                                    <Nav.Link href="/">Charts - U.S.</Nav.Link>
                                     <Nav.Link href="/">Politics</Nav.Link>
                                     <Nav.Link href="/">N.Y.</Nav.Link>
                                     <Nav.Link href="/">Business</Nav.Link>
