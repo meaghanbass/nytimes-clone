@@ -1,20 +1,14 @@
 import React from "react"
-// import { Link, graphql } from "gatsby"
 import GeneralLayout from "../components/general-layout"
 import SEO from "../components/seo"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../styles/styles.scss'
-import Chart from "../components/chart"
+import AMChartComponent from "../components/charts/amChartComponent"
 
-export default ({ data }) => {
+
+export default () => {
     return (
         <GeneralLayout>
-        <SEO title="Charts" />
-        <div id="article-index">
-            <br />
-            <h4>Charts Index</h4>
-            <Chart />
-        </div>
+            <SEO title="Charts" />
+            <AMChartComponent />
         </GeneralLayout>
     )
 }

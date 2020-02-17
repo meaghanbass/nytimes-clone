@@ -8,7 +8,7 @@ import Nav from "react-bootstrap/Nav"
 // import FormControl from "react-bootstrap/FormControl"
 // import Button from "react-bootstrap/Button"
 import SearchIcon from "../images/search.svg"
-import Hamburger from "../images/hamburger.svg"
+// import Hamburger from "../images/hamburger.svg"
 
 import DateComponent from "../components/today-date"
 

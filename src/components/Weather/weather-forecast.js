@@ -1,8 +1,8 @@
 import React from "react"
-import Sunny from "../../images/new-weather/sunny.svg"
+import Sunny from "../../images/weather/sunny.svg"
 import PartlyCloudy from "../../images/new-weather/partly-coudy.svg"
-import Fog from "../../images/new-weather/fog.svg"
-import Mist from "../../images/new-weather/mist.svg"
+import Fog from "../../images/weather/patchyfog.svg"
+import Mist from "../../images/weather/mist.svg"
 
 import NEEDICON from "../../images/weather/NEEDWEATHER.svg"
 
@@ -69,6 +69,14 @@ class WeatherForecast extends React.Component {
                 return (
                     <>
                     <p className="weather-forecast"><PartlyCloudy /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
+                    </>
+                );
+            }
+            else if(weather.current.weather_descriptions[0] === "Haze") {
+                return (
+                    <>
+                    <p className="weather-forecast">Haze {weather.current.temperature}&deg;C</p>
                     <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
                     </>
                 );
