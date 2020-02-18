@@ -36,8 +36,13 @@ button {
         background-color: #326891;
     }
 }
-.chart {
-    // width: 400px;
+#chartdiv .amcharts-Sprite-group.amcharts-Container-group.amcharts-Series-bullets-group.amcharts-XYSeries-bullets-group.amcharts-LineSeries-bullets-group {
+    // fill: transparent;
+    // stroke: transparent;
+    // .amcharts-Sprite-group .amcharts-Circle-group {
+    //     fill: red;
+    //     stroke: red;
+    // }
 }
 #fulldate {
     font-family: sans-serif;
