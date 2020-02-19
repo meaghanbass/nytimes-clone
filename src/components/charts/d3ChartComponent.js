@@ -1,6 +1,6 @@
 import React from 'react'
 
-class VisChartComponent extends React.Component {
+class D3ChartComponent extends React.Component {
     render() {
         
         return (
@@ -11,4 +11,4 @@ class VisChartComponent extends React.Component {
     }
 }
 
-export default VisChartComponent
+export default D3ChartComponent
