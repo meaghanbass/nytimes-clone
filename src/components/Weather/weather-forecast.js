@@ -73,10 +73,10 @@ class WeatherForecast extends React.Component {
                     </>
                 );
             }
-            else if(weather.current.weather_descriptions[0] === "Haze") {
+            else if(weather.current.weather_descriptions[0] === "Haze" || "Overcast") {
                 return (
                     <>
-                    <p className="weather-forecast">Haze {weather.current.temperature}&deg;C</p>
+                    <p className="weather-forecast"><PartlyCloudy /> {weather.current.temperature}&deg;C</p>
                     <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
                     </>
                 );
@@ -86,6 +86,7 @@ class WeatherForecast extends React.Component {
                 return (
                     <>
                     <p className="weather-forecast"><NEEDICON /> {weather.current.temperature}&deg;C</p>
+                    <p>{weather.current.weather_descriptions[0]}</p>
                     <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
                     </>
                 );
