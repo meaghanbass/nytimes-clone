@@ -85,7 +85,7 @@ class WeatherForecast extends React.Component {
                 console.log(weather.current.weather_descriptions[0]);
                 return (
                     <>
-                    <p className="weather-forecast"><NEEDICON /> {weather.current.temperature}&deg;C</p>
+                    <p className="weather-forecast"><NEEDICON />{weather.current.temperature}&deg;C</p>
                     <p>{weather.current.weather_descriptions[0]}</p>
                     <p className="weather-location">{weather.location.name}, {weather.location.region}</p>
                     </>
