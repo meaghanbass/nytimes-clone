@@ -4,6 +4,9 @@ import * as am4core from "@amcharts/amcharts4/core"
 import * as am4charts from "@amcharts/amcharts4/charts"
 import am4themes_animated from "@amcharts/amcharts4/themes/animated"
 
+// I removed AMCHARTS because it was breaking on deployment
+// run npm install @amcharts/amcharts4 if you want to try to use it again. A chart component has already been created.
+
 am4core.useTheme(am4themes_animated);
 
 class AMChartComponent extends React.Component {
